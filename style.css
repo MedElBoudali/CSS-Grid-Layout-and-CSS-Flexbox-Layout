@@ -1,0 +1,27 @@
+/* Selector{
+    property: value;
+} */
+
+body {
+  background-image: url('./background.jpg');
+  height: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  color: red;
+  text-align: center;
+  border: 5px solid purple;
+  cursor: pointer;
+}
+
+p {
+  color: pink;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
