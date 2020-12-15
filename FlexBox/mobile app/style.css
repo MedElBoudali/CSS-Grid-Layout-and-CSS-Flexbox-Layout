@@ -63,10 +63,6 @@ a.button {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.icon-bar a:hover {
-  background: #aa903a;
-}
-
 .icon-bar a:first-child {
   border-left: 0;
 }
@@ -74,6 +70,7 @@ a.button {
 .icon-bar a:first-child,
 .icon-bar a:hover {
   border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+  background: #aa903a;
 }
 
 .icon-bar {
