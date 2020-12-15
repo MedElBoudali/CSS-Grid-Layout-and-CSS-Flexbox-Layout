@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <title>Starter Files and Tooling Setup!</title>
+  </head>
+  <body>
+    <!-- .container>.item*10{$} -->
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+    </div>
+
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 200px 400px; /*explicit columns: we defined*/
+        grid-template-rows: 100px 300px; /*explicit rows: we defined*/
+        /* if we have more items than 2 rows the grid will handle them with auto and named implicit rows and columns*/
+        grid-auto-rows: 100px;
+        /* items from 1 to 4 will give as 2 columns and 2 rows explicit */
+        /* items from 5 to 10 are named implicit because we didnt specifie rows height we can modified with grid auto rows*/
+      }
+    </style>
+  </body>
+</html>
