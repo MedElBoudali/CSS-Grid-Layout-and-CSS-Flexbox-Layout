@@ -95,8 +95,35 @@
         <img src="https://source.unsplash.com/random/207x209" alt="" />
         <img src="https://source.unsplash.com/random/207x210" alt="" />
       </section>
+      <section class="footer">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <ul class="footer-nav">
+          <li>
+            <a href="">Tacos</a>
+          </li>
+          <li>
+            <a href="">Beers</a>
+          </li>
+          <li>
+            <a href="">Wines</a>
+          </li>
+          <li>
+            <a href="">Desserts</a>
+          </li>
+          <li>
+            <a href="">Reservations</a>
+          </li>
+        </ul>
+      </section>
     </div>
 
-    <script></script>
+    <script>
+      const navBtn = document.querySelector('button[aria-expanded]');
+      const toggleNav = ({ target }) => {
+        const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+        navBtn.setAttribute('aria-expanded', !expanded);
+      };
+      navBtn.addEventListener('click', toggleNav);
+    </script>
   </body>
 </html>
