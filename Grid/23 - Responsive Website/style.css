@@ -1,0 +1,169 @@
+body {
+  font-size: 15px;
+}
+
+button {
+  background: #ffc600;
+  border: 0;
+  padding: 10px 20px;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.top {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 'hero hero cta1' 'hero hero cta2';
+}
+
+.top > *,
+.hero::before {
+  border-radius: 5px;
+  transition: box-shadow 0.7s;
+}
+
+.hero {
+  min-height: 400px;
+  grid-area: hero;
+  position: relative;
+  background: url('./images/taco.jpg');
+  background-position: bottom right;
+  background-size: cover;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hero::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.308);
+}
+
+.hero > * {
+  color: white;
+  margin: 0;
+  padding: 5px 10px;
+  z-index: 1;
+  background-color: var(--yellow);
+  border-radius: 5px;
+}
+
+.cta {
+  background-color: var(--yellow);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.cta p {
+  margin: 0;
+}
+
+.cta1 {
+  grid-area: cta1;
+}
+
+.cta2 {
+  grid-area: cta2;
+}
+
+.hero:hover,
+.cta:hover {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.62);
+}
+
+.price {
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+/* Menu */
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: 40px;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  background-color: var(--yellow);
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  padding: 10px 0;
+  color: var(--black);
+}
+
+.menu a:hover {
+  background-color: var(--black);
+  color: var(--yellow);
+}
+
+[aria-controls='menu-list'] {
+  display: none;
+}
+
+/* Features */
+.features {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature {
+  background: #ffffff33;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.445);
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.feature .icon {
+  font-size: 40px;
+}
+
+.feature p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.about {
+  background: #ffffff33;
+  border: 1px solid rgba(255, 255, 255, 0.445);
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  align-items: center;
+}
